@@ -30,3 +30,8 @@
 ## 小结
 ![Alt text](Pic/Bg-Pic-6.png)
 这部分课程是Overview，后续会针对不同任务进行具体操作。
+
+## 链接
+**视频：书生·浦语大模型全链路开源体系**
+
+https://www.bilibili.com/video/BV1Rc411b7ns/?spm_id_from=333.337.search-card.all.click&vd_source=cb911a92ddd7e0d930b1daa60c3fc181
