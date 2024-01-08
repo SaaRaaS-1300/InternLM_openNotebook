@@ -179,3 +179,54 @@
 ### Demo 运行效果
 ![Alt text](Pic/Bg-Pic-10.png)
 
+## **浦语·灵笔图文理解创作 Demo**
+
+### 环境准备
+
+**进入 conda 环境之后，使用以下命令从本地克隆一个已有的 pytorch 2.0.1 的环境**
+
+    /root/share/install_conda_env_internlm_base.sh xcomposer-demo
+
+![Alt text](Pic/Bg-Pic-11.png)
+
+**然后使用以下命令激活环境**
+
+    conda activate xcomposer-demo
+
+**接下来运行以下命令，安装 transformers、gradio 等依赖包。**
+
+    pip install transformers==4.33.1 timm==0.4.12 sentencepiece==0.1.99 gradio==3.44.4 markdown2==2.4.10 xlsxwriter==3.1.2 einops accelerate
+
+### 模型下载
+
+**安装 modelscope**
+
+    pip install modelscope==1.9.5
+
+![Alt text](Pic/Bg-Pic-12.png)
+
+**在 /root/model 路径下新建 download.py 文件并在其中输入以下内容，并运行 python /root/model/download.py 执行下载**
+
+    import torch
+    from modelscope import snapshot_download, AutoModel, AutoTokenizer
+    import os
+    model_dir = snapshot_download('Shanghai_AI_Laboratory/internlm-xcomposer-7b', cache_dir='/root/model', revision='master')
+
+### 代码准备
+
+**在 /root/code git clone InternLM-XComposer 仓库的代码**
+
+    cd /root/code
+    git clone https://gitee.com/internlm/InternLM-XComposer.git
+    cd /root/code/InternLM-XComposer
+    git checkout 3e8c79051a1356b9c388a6447867355c0634932d  
+    # 最好保证和教程的 commit 版本一致
+
+### Demo 运行效果
+![Alt text](Pic/Bg-Pic-13.png)
++ **只使用推理，两张 A100 都很勉强**
+
+## 链接
+**视频：轻松玩转书生·浦语大模型趣味Demo**
+
+https://www.bilibili.com/video/BV1Ci4y1z72H/?spm_id_from=333.999.0.0&vd_source=cb911a92ddd7e0d930b1daa60c3fc181
