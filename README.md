@@ -3,4 +3,4 @@
 + 🍟Lesson - 1🍟
 notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-1/Lesson-1-Notebook.md
 + 🍔Lesson - 2🍔
-notebookLink: 
+notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-2/Lesson-2-Notebook.md
