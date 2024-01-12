@@ -386,8 +386,31 @@
 ### **具体效果检验**
 ![Alt text](Pic/Bg-Pic-6.png)
 ---
-+ **通过上述步骤，先写出构建向量数据库的代码 construct.py**
++ **通过上述步骤，先写出构建向量数据库的代码 create_db.py**
 
 ---
+![Alt text](Pic/Bg-Pic-7.png)
+---
 
++ **上图是获得 Langchain 和 InternLM 构建知识库的最终效果(基础作业)**
+---
+![Alt text](Pic/Bg-Pic-8.png)
+![Alt text](Pic/Bg-Pic-10.png)
 
++ **为了解决进阶作业的问题，我们先创建相关的知识库(DIY)**
++ **我们决定采用陀思妥耶夫斯基的《地下室手记》介绍，来进行构建**
+
+---
+![Alt text](Pic/Bg-Pic-9.png)
+---
+
++ **上图是构建数据库之前的效果**
+---
+![Alt text](Pic/Bg-Pic-11.png)
+---
++ **这是构建数据库之后的效果(进阶作业)**
+
+## 链接
+**视频：基于 InternLM 和 LangChain 搭建你的知识库**
+
+https://www.bilibili.com/video/BV1sT4y1p71V/?spm_id_from=333.788&vd_source=cb911a92ddd7e0d930b1daa60c3fc181
