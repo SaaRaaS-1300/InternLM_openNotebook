@@ -476,9 +476,11 @@ https://huggingface.co/datasets/timdettmers/openassistant-guanaco/tree/main
     mkdir /root/personal_assistant/code && cd /root/personal_assistant/code
     git clone https://github.com/InternLM/InternLM.git
 
-
+![Alt text](Pic/Bg-Pic-8.png)
 
 **运行效果如上(基础作业)**
+
+
 
 ## **重要 Bug 笔记**
 
