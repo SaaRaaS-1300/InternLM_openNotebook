@@ -6,3 +6,7 @@ notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Le
 notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-2/Lesson-2-Notebook.md
 + 😝Lesson - 3😝
 notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-3/Lesson-3-Notebook.md
++ 🤠Lesson - 4🤠
+notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-4/Lesson-4-Notebook.md
++ 😶‍🌫️Lesson - 5😶‍🌫️
+notebookLink: 
