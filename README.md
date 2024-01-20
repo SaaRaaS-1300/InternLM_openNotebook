@@ -10,3 +10,5 @@ notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Le
 notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-4/Lesson-4-Notebook.md
 + 😶‍🌫️Lesson - 5😶‍🌫️
 notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-5/Lesson-5-Notebook.md
++ 👻Lesson - 6👻
+notebookLink: https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-6/Lesson-6-Notebook.md
