@@ -13,7 +13,7 @@ notebookLink: [Lesson-3 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 notebookLink: [Lesson-4 链接](https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-4/Lesson-4-Notebook.md)
 
 + 😶‍🌫️Lesson - 5😶‍🌫️
-notebookLink: [Lesson-5 链接](https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-6/Lesson-6-Notebook.md)
+notebookLink: [Lesson-5 链接](https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-5/Lesson-5-Notebook.md)
 
 + 👻Lesson - 6👻
 notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-6/Lesson-6-Notebook.md)
