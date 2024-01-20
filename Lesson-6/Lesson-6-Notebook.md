@@ -97,6 +97,12 @@
     datasets = [*siqa_datasets, *winograd_datasets]
     models = [opt125m, opt350m]
 
+**(目标) 评测 internlm2-chat-7b**
+
+![Alt text](Pic/Bg-Pic-10.png)
+
+![Alt text](Pic/Bg-Pic-11.png)
+
 **OpenCompass 提供了一系列预定义的模型配置，位于 configs/models 下。以下是与 opt-350m（configs/models/opt/hf_opt_350m.py）相关的配置片段：**
 
     # 使用 `HuggingFaceCausalLM` 评估由 HuggingFace 的 `AutoModelForCausalLM` 支持的模型
