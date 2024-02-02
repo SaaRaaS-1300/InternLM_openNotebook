@@ -1,4 +1,3 @@
-# Copyright (c) OpenMMLab. All rights reserved.
 import torch
 from datasets import load_dataset
 from mmengine.dataset import DefaultSampler
