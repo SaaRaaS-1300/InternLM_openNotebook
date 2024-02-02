@@ -508,3 +508,11 @@ https://huggingface.co/datasets/timdettmers/openassistant-guanaco/tree/main
 **视频：XTuner 大模型单卡低成本微调实战**
 
 https://www.bilibili.com/video/BV1yK4y1B75J/?spm_id_from=333.788&vd_source=cb911a92ddd7e0d930b1daa60c3fc181
+
+## 补充(进阶作业)
+
+![alt text](Pic/Bg-Pic-13.png)
+
++ **将微调模型部署至 openxlab**
+
+****
