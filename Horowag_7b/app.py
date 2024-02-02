@@ -2,8 +2,8 @@ from transformers import AutoModel, AutoTokenizer
 import gradio as gr
 import mdtex2html
 
-tokenizer = AutoTokenizer.from_pretrained("Shanghai_AI_Laboratory/internlm-chat-7b", trust_remote_code=True)
-model = AutoModel.from_pretrained("Shanghai_AI_Laboratory/internlm-chat-7b", trust_remote_code=True).half().cuda()
+tokenizer = AutoTokenizer.from_pretrained("while-nalu/Horowag_7b", trust_remote_code=True)
+model = AutoModel.from_pretrained("while-nalu/Horowag_7b", trust_remote_code=True).half().cuda()
 model = model.eval()
 
 """Override Chatbot.postprocess"""
