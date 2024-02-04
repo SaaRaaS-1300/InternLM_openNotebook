@@ -23,7 +23,7 @@ class Horowag(LLM):
         super().__init__()
         print("正在加载 Horowag 模型...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-        self.model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, repetition_penalty=1.002).to(torch.bfloat16).cuda()
+        self.model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True).to(torch.bfloat16).cuda()
         self.model = self.model.eval()
         self.top_p = top_p
         self.max_token = max_token
