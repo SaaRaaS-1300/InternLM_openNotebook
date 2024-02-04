@@ -217,9 +217,3 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 + 我的项目仓库链接：[InternLM_openNotebook](https://github.com/SaaRaaS-1300/InternLM_openNotebook)
 + 我的 `HuggingFace` 模型开源：[Horowag_7b](https://huggingface.co/while-nalu/Horowag_7b/tree/main)
 + 我的 `HuggingFace` 数据开源：[horo2ds](https://huggingface.co/datasets/while-nalu/horo2ds/tree/main)
-
-<style>
-table {
-margin: auto;
-}
-</style>
