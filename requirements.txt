@@ -197,8 +197,8 @@ tomli==2.0.1
 tomlkit==0.12.0
 tools==0.1.9
 toolz==0.12.1
-torch==2.1.2
-torchvision==0.16.2
+torch==2.0.1
+torchvision==0.15.2
 tornado==6.4
 tqdm==4.65.2
 transformers==4.37.2
