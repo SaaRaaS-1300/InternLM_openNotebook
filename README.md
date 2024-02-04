@@ -78,7 +78,7 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 + **✨感谢 [Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) 提供的美术支持✨**
 
-## 🍔[B站技术分享]()🍔
+## 🍔[B站技术分享](https://www.bilibili.com/video/BV1V7421N7ae/?share_source=copy_web&vd_source=1019285f8b0281a44f38cf7445f38144)🍔
 
  <center> 
  <img src="Horowag_7b/dataset/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
