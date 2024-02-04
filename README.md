@@ -80,8 +80,8 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
  <img src="Horowag_7b/dataset/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
  </center>
 
-<style>
-table {
-margin: auto;
-}
-</style>
+ <style>
+ table {
+ margin: auto;
+ }
+ </style>
