@@ -63,7 +63,7 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
             output='Horowag_7b')
 
  <center> 
- <img src="horowag_exp.gif" alt="example" height="200%"> 
+ <img src="horowag_exp.gif"> 
  </center>
 
 **目前模型应用的部署情况：**
