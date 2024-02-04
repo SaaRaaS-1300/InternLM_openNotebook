@@ -5,6 +5,8 @@
 
 ## **Introduction**
 
+<div align="center">
+
 | 基础属性 | 模型相关解释 |
 |:-------:|:-------:|
 | 模型基座 | InternLM2-Chat-7b |
@@ -14,7 +16,9 @@
 | 硬件 | (1/2) A100 |
 | 数据来源 | 自制的贤狼赫萝对话语料(约千条) |
 
----
+</div>
+
+------
 
 ![Alt text](dataset/pic/README-2.png)
 

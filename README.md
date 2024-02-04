@@ -26,11 +26,15 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 ![alt text](Horowag_7b/dataset/pic/BG-1.jpg)
 
+<div align="center">
+
 | 版本号 | 模型相关解释 |
 |:-------:|:-------:|
 | **Horowag_7b_V1** | **InternLM2-Chat-7b 微调后的基础赫萝对话模型** |
 | **Horowag_7b_V2** | **优化数据增强方法 + Langchain 辅助模型输出** |
 | **-- 暂未完成 --** | **--** |
+
+</div>
 
 ## 🍏OpenXLab🍎
 
@@ -63,7 +67,7 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 + **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
 
 <center>
-<video controls src="horowag_exp.mp4" title="Title"></video>
+<video src="horowag_demo.mp4" width=180/></video>
 </center>
 
 
@@ -79,9 +83,3 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
  <center> 
  <img src="Horowag_7b/dataset/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
  </center>
-
- <style>
- table {
- margin: auto;
- }
- </style>
