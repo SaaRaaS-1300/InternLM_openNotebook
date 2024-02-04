@@ -62,13 +62,14 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
                         'tokenizer_config.json'],
             output='Horowag_7b')
 
+ <center> 
+ <img src="horowag_exp.gif" alt="example" width="100%" height="auto"> 
+ </center>
+
 **目前模型应用的部署情况：**
 
 + **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
-
-<center>
-<video src="horowag_demo.mp4"></video>
-</center>
++ **OpenXLab模型链接：**[OpenXLab-Horo](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
 
 ## 👻致谢👻
 
