@@ -67,9 +67,8 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 + **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
 
 <center>
-<video src="horowag_demo.mp4" width=180/></video>
+<video src="horowag_demo.mp4"></video>
 </center>
-
 
 ## 👻致谢👻
 
