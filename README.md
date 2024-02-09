@@ -1,6 +1,6 @@
 # InternLM_openNotebook
 
-![alt text](Horowag_7b/dataset/pic/LOGO.jpg)
+![alt text](Horowag_7b/src/pic/LOGO.jpg)
 
 ## 😊书生·浦语 (InternLM) 开源大语言模型课程笔记😊
 
@@ -24,14 +24,15 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 ## 🌠版本更新🌠
 
-![alt text](Horowag_7b/dataset/pic/BG-1.jpg)
+![alt text](Horowag_7b/src/pic/BG-1.jpg)
 
 <div align="center">
 
 | 版本号 | 模型相关解释 |
 |:-------:|:-------:|
-| **Horowag_7b_V1** | **InternLM2-Chat-7b 微调后的基础赫萝对话模型** |
-| **Horowag_7b_V2** | **优化数据增强方法 + Langchain 辅助模型输出** |
+| **Horowag_7b (V1)** | **InternLM2-Chat-7b 微调后的基础赫萝对话模型** |
+| **Horowag_7b (V2)** | **优化数据增强方法 + Langchain 辅助模型输出** |
+| **Horowag_Mini** | **InternLM2-Chat-1_8b 微调后的轻量级赫萝对话模型** |
 | **-- 暂未完成 --** | **--** |
 
 </div>
@@ -81,5 +82,5 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 ## 🍔[B站技术分享](https://www.bilibili.com/video/BV1V7421N7ae/?share_source=copy_web&vd_source=1019285f8b0281a44f38cf7445f38144)🍔
 
  <center> 
- <img src="Horowag_7b/dataset/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
+ <img src="Horowag_7b/src/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
  </center>
