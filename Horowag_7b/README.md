@@ -1,7 +1,7 @@
 # 🐺**与赫萝闲聊 && Horowag_7b**🐺
 > **“咱的赫萝对话模型出炉啦~~” -> 那路**
 
-![Alt text](dataset/pic/README-1.jpeg)
+![Alt text](src/pic/README-1.jpeg)
 
 ## **Introduction**
 
@@ -20,7 +20,7 @@
 
 ------
 
-![Alt text](dataset/pic/README-2.png)
+![Alt text](src/pic/README-2.png)
 
 Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色扮演聊天机器人。具体目标是将《狼与香辛料》中贤狼赫萝的形象带入大语言模型，实现带入感较高的角色扮演行为。针对技术细节，Horowag_7b 使用了书生·浦语开源的 Xtuner 进行低成本微调训练，在训练条件较差的条件下，赋予模型高质量的自然语言处理能力。硬件方面，我采用了 (1/2) A100 支持训练，显存约40G左右，如果参数调节合理，显存可控制在 16G 以下。
 
@@ -35,7 +35,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 **如果遇到了 `git` 连接失败的问题，我的解决方案是，先使用浏览器登陆 `github`，然后下载 `Xtuner` 的 `master.zip` 文件，解压到对应路径中，然后执行 `pip` 命令。**
 
-![Alt text](dataset/pic/README-3.png)
+![Alt text](src/pic/README-3.png)
 
 **同样，我还需要安装`streamlit`等`web`相关的包。这里推荐访问我的 github 仓库: [InternLM_openNotebook](https://github.com/SaaRaaS-1300/InternLM_openNotebook/tree/main), 获取其中的 `requirements.txt` 并根据该文件安装，同样可以完成环境配置：**
 
@@ -93,7 +93,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 **我采用 `xtuner` 自带的训练脚本，通过调试和修改，达到了可以接受的微调效果：**
 
-![Alt text](dataset/pic/README-4.png)
+![Alt text](src/pic/README-4.png)
 
 **我更改了很多细节，具体可以参考`Github`中的`internlm2_7b_qlora_horo2ds_e3.py`脚本，该脚本修改方法与我在 `Lesson-4` 里修改的方法相近，具体参考链接: [Lesson-4-Notebook](https://github.com/SaaRaaS-1300/InternLM_openNotebook/blob/main/Lesson-4/Lesson-4-Notebook.md)😃**
 
@@ -120,7 +120,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
     # 若要开启 deepspeed 加速，增加 --deepspeed deepspeed_zero2 即可
 
-![Alt text](dataset/pic/README-5.png)
+![Alt text](src/pic/README-5.png)
 
 ### **合并自己的微调参数 hf_merge**
 
@@ -167,7 +167,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 **最终出来的结果应该如下所示(和 LLM 模型参数长得差不多)：**
 
-![Alt text](dataset/pic/README-6.png)
+![Alt text](src/pic/README-6.png)
 
 ### **执行 `Web_demo`**
 
@@ -175,7 +175,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 + **`Web_demo` 放置在 Github 仓库中辣，修改内容如下:**
 
-![Alt text](dataset/pic/README-7.png)
+![Alt text](src/pic/README-7.png)
 
 **执行命令：**
 
@@ -189,15 +189,15 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 **虽然技术效果没有极其优秀，但是与赫萝闲聊确实很 good！**
 
-![Alt text](dataset/pic/README-8.png)
+![Alt text](src/pic/README-8.png)
 
 **其他效果展示:**
 
-![Alt text](dataset/pic/README-9.png)
+![Alt text](src/pic/README-9.png)
 
 **我实现的聊天细节也成功展现出来了(在不输入任何内容的情况下，使用 `streamlit` 向用户打招呼)**
 
-![Alt text](dataset/pic/README-10.png)
+![Alt text](src/pic/README-10.png)
 
 ### **小技巧**
 
@@ -209,7 +209,7 @@ Horowag_7b 是由书生·浦语的 InternLM2-Chat-7b 经过微调得到的角色
 
 ## **🍏想说的话🍎**
 
-![Alt text](dataset/pic/README-11.jpeg)
+![Alt text](src/pic/README-11.jpeg)
 
 目前，我觉得 `Horowag_7b` 对我而言是相当有意思的，不仅体现在我能提取人物特点进行互动，也让我的技术力有了整体提升。我非常感谢 书生·浦语开源项目分享出来的相关资源，也很感谢 chat凉宫分享出来的各种经验。 (虽然我的感谢太过渺小了，但我还是感激一下~~) 之后，我会尽可能探索更多的 LLM技术，争取让贤狼赫萝更生动一点。
 
