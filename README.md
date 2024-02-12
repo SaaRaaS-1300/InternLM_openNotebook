@@ -63,6 +63,8 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
                         'tokenizer_config.json'],
             output='Horowag_7b')
 
+---
+
  <center> 
  <img src="horowag_exp.gif"> 
  </center>
