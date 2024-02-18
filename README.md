@@ -1,4 +1,5 @@
 # InternLM_openNotebook
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
 
 ![alt text](Horowag_7b/src/pic/LOGO.jpg)
 
