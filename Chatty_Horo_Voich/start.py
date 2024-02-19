@@ -12,7 +12,7 @@ __file__ = " "
 # 构建编译环境
 os.system("pip install imageio==2.4.1")
 os.system("pip install moviepy")
-os.system('Chatty_Horo_Voich/VITS-kit/monotonic_align')
+os.system('cd Chatty_Horo_Voich/VITS-kit/monotonic_align')
 os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
 os.system("cd ../../../../")
