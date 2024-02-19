@@ -13,6 +13,10 @@ __file__ = "/home/xlab-app-center/"
 os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/test")
 os.system("pip install imageio==2.4.1")
 os.system("pip install moviepy")
+os.system("cd /home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/monotonic_align")
+os.system("mkdir monotonic_align")
+os.system("python setup.py build_ext --inplace")
+os.system("cd /home/xlab-app-center/")
 
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
