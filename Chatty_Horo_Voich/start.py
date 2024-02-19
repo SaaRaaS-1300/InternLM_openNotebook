@@ -39,9 +39,9 @@ def voice_builder(context: str):
     # 定义 API 参数
     program = "Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
-    api_param_conf_1 = "/home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth"
+    api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "/home/xlab-app-center/Speaker/VITS_Horo_Config.json"
+    api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
     api_param_conf_3 = "/home/xlab-app-center/"
     api_param_args_4 = "-l" 
@@ -136,7 +136,7 @@ class Chatty_Horo_Chain:
             用于音频转化
         """
         # 路径
-        return os.path.join(os.path.dirname(__file__), "output.wav")
+        return "/home/xlab-app-center/output.wav"
 
 
 # 构建对话模式
