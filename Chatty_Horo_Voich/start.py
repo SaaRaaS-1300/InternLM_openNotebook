@@ -7,7 +7,7 @@ import gradio as gr
 import sys
 import os
 
-__file__ = "Chatty_Horo_Voich"
+__file__ = "/home/xlab-app-center/"
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
          output='Horowag_7b')
@@ -37,13 +37,13 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
+    program = "SaaRaaS-1300/InternLM_openNotebook/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
     api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
+    api_param_conf_2 = "/Speaker/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
-    api_param_conf_3 = "Chatty_Horo_Voich/"
+    api_param_conf_3 = "/home/xlab-app-center/"
     api_param_args_4 = "-l" 
     api_param_conf_4 = "日本語"
     api_param_args_5 = "-t" 
@@ -136,7 +136,7 @@ class Chatty_Horo_Chain:
             用于音频转化
         """
         # 路径
-        return "Chatty_Horo_Voich/output.wav"
+        return os.path.join(os.path.dirname(__file__), "output.wav")
 
 
 # 构建对话模式
