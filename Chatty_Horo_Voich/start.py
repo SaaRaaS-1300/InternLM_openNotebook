@@ -7,7 +7,7 @@ import gradio as gr
 import sys
 import os
 
-__file__ = ""
+__file__ = " "
 
 # 构建编译环境
 os.system("pip install imageio==2.4.1")
@@ -15,7 +15,7 @@ os.system("pip install moviepy")
 os.chdir('Chatty_Horo_Voich/VITS-kit/monotonic_align')
 os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
-os.chdir('')
+os.chdir(' ')
 
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
@@ -29,7 +29,7 @@ print("Qwen_Auxiliary_AWQ 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
-         output='/home/xlab-app-center/Speaker/')
+         output='Speaker')
 print("Speaker_Tuning_Model 下载完毕")
 
 # Qwen 模型初始化
@@ -46,7 +46,7 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
+    program = "Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
     api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
