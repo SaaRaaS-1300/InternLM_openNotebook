@@ -28,6 +28,7 @@ download(model_repo='SaaRaaS/Horowag_7b',
                      'tokenizer.model',
                      'tokenizer_config.json'],
          output='Horowag_7b')
+print("Horowag_7b 下载完毕")
 
 # 加载辅助的语言模型 Qwen1_5
 download(model_repo='SaaRaaS/Qwen_Auxiliary_AWQ',
@@ -40,12 +41,14 @@ download(model_repo='SaaRaaS/Qwen_Auxiliary_AWQ',
                      'tokenizer_config.json',
                      'vocab.json'],
          output='Qwen_Auxiliary_AWQ')
+print("Qwen_Auxiliary_AWQ 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
          model_name=['VITS_Horo_G_10000R.pth',
                      'VITS_Horo_Config.json'],
          output='Speaker')
+print("Speaker_Tuning_Model 下载完毕")
 
 # Qwen 模型初始化
 Qwen_model = Qwen_Assistant(
