@@ -10,7 +10,11 @@ import os
 __file__ = "/home/xlab-app-center/"
 
 # 构建编译环境
-os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/test")
+os.system("ls")
+os.system("cd ..")
+os.system("ls")
+os.system("cd ../..")
+os.system("ls")
 
 # 命令
 os.system("pip install imageio==2.4.1")
