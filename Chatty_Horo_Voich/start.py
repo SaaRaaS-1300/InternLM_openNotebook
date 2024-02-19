@@ -7,7 +7,7 @@ import gradio as gr
 import sys
 import os
 
-__file__ = "/root/Chatty_Horo_Voich/Voice/"
+__file__ = "/root/"
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
          model_name=['pytorch_model-00001-of-00008',
@@ -30,10 +30,26 @@ download(model_repo='SaaRaaS/Horowag_7b',
          output='Horowag_7b')
 
 # 加载辅助的语言模型 Qwen1_5
+download(model_repo='SaaRaaS/Qwen_Auxiliary_AWQ',
+         model_name=['config.json',
+                     'generation_config.json',
+                     'merges.txt',
+                     'model.safetensors',
+                     'quant_config.json',
+                     'tokenizer.json',
+                     'tokenizer_config.json',
+                     'vocab.json'],
+         output='Qwen_Auxiliary_AWQ')
+
+# 加载语音微淘模型 Speaker
+download(model_repo='SaaRaaS/Speaker_Tuning_Model',
+         model_name=['VITS_Horo_G_10000R.pth',
+                     'VITS_Horo_Config.json'],
+         output='Speaker')
 
 # Qwen 模型初始化
 Qwen_model = Qwen_Assistant(
-    model_path="/root/Chatty_Horo_Voich/T_Model/Qwen1_5_4b_Chat_AWQ",
+    model_path="Qwen_Auxiliary_AWQ",
     top_p=0.25,
     max_token=128, 
     temperature=0.1
@@ -45,13 +61,13 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "/root/Chatty_Horo_Voich/VITS-fast-fine-tuning/cmd_inference.py"
+    program = "VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
-    api_param_conf_1 = "/root/Chatty_Horo_Voich/V_Model/Test/module/G_10000R.pth"
+    api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "/root/Chatty_Horo_Voich/V_Model/Test/config/config.json"
+    api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
-    api_param_conf_3 = "/root/Chatty_Horo_Voich/Voice/"
+    api_param_conf_3 = "/root/"
     api_param_args_4 = "-l" 
     api_param_conf_4 = "日本語"
     api_param_args_5 = "-t" 
@@ -177,7 +193,7 @@ with block_1 as demo_1:
             )
             with gr.Row():      
                 gr.Image(
-                    value="/root/Chatty_Horo_Voich/72f177ca7f42b5adb48b8edfa7e3bed.jpg",
+                    value="src/gradio_img/img.jpg",
                     interactive=False,
                     height="auto",
                     label="Horo",
