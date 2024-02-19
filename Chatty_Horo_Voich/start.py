@@ -10,13 +10,13 @@ import os
 __file__ = "/home/xlab-app-center/"
 
 # 构建编译环境
-os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/test")
+os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook")
 os.system("pip install imageio==2.4.1")
 os.system("pip install moviepy")
-os.system("cd /home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/monotonic_align")
+os.system("cd /InternLM_openNotebook/Chatty_Horo_Voich/VITS-kit/monotonic_align")
 os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
-os.system("cd /home/xlab-app-center/")
+os.system("cd ../../../../../")
 
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
@@ -47,7 +47,7 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "/home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
+    program = "/InternLM_openNotebook/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
     api_param_conf_1 = "/home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
