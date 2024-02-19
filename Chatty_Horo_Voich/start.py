@@ -169,7 +169,7 @@ with block_1 as demo_1:
             )
             with gr.Row():      
                 gr.Image(
-                    value="src/gradio_img/img.jpg",
+                    value="Chatty_Horo_Voich/src/gradio_img/img.jpg",
                     interactive=False,
                     height="auto",
                     label="Horo",
