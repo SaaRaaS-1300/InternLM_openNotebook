@@ -136,7 +136,7 @@ class Chatty_Horo_Chain:
             用于音频转化
         """
         # 路径
-        return os.path.join(os.path.dirname(__file__), "/output.wav")
+        return "Chatty_Horo_Voich/output.wav"
 
 
 # 构建对话模式
