@@ -37,7 +37,7 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "VITS-kit/cmd_inference.py"
+    program = "Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
     api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
