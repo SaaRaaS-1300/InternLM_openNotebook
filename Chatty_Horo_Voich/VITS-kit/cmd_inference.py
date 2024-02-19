@@ -55,7 +55,7 @@ if __name__ == "__main__":
     parser.add_argument('-s', '--spk', type=str, help='合成目标说话人名称')
     #可选参数
     parser.add_argument('-on', '--output_name', type=str, default="output", help='输出文件的名称')
-    parser.add_argument('-ns', '--noise_scale', type=float,default= .667,help='感情变化程度')
+    parser.add_argument('-ns', '--noise_scale', type=float,default= .777,help='感情变化程度')
     parser.add_argument('-nsw', '--noise_scale_w', type=float,default=0.6, help='音素发音长度')
     parser.add_argument('-ls', '--length_scale', type=float,default=1, help='整体语速')
     

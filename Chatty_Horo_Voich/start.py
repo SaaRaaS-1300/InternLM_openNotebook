@@ -9,7 +9,10 @@ import os
 
 __file__ = "/home/xlab-app-center/"
 
+# 构建编译环境
 os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/test")
+os.system("pip install imageio==2.4.1")
+os.system("pip install moviepy")
 
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
@@ -39,33 +42,33 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 
 # 定义音频构建函数
 def voice_builder(context: str):
-    # # 定义 API 参数
-    # program = "/home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
-    # api_param_args_1 = "-m" 
-    # api_param_conf_1 = "/home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth"
-    # api_param_args_2 = "-c" 
-    # api_param_conf_2 = "/home/xlab-app-center/Speaker/VITS_Horo_Config.json"
-    # api_param_args_3 = "-o" 
-    # api_param_conf_3 = "/home/xlab-app-center/"
-    # api_param_args_4 = "-l" 
-    # api_param_conf_4 = "日本語"
-    # api_param_args_5 = "-t" 
-    # api_param_conf_5 = context
-    # api_param_args_6 = "-s"
-    # api_param_conf_6 = "Horo"
-    # api_param_args_7 = "-ls"
-    # api_param_conf_7 = "0.85"
+    # 定义 API 参数
+    program = "/home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
+    api_param_args_1 = "-m" 
+    api_param_conf_1 = "/home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth"
+    api_param_args_2 = "-c" 
+    api_param_conf_2 = "/home/xlab-app-center/Speaker/VITS_Horo_Config.json"
+    api_param_args_3 = "-o" 
+    api_param_conf_3 = "/home/xlab-app-center/"
+    api_param_args_4 = "-l" 
+    api_param_conf_4 = "日本語"
+    api_param_args_5 = "-t" 
+    api_param_conf_5 = context
+    api_param_args_6 = "-s"
+    api_param_conf_6 = "Horo"
+    api_param_args_7 = "-ls"
+    api_param_conf_7 = "0.85"
     
-    # api_pt = [api_param_args_1, api_param_conf_1, 
-    #           api_param_args_2, api_param_conf_2,
-    #           api_param_args_3, api_param_conf_3,
-    #           api_param_args_4, api_param_conf_4,
-    #           api_param_args_5, api_param_conf_5,
-    #           api_param_args_6, api_param_conf_6,
-    #           api_param_args_7, api_param_conf_7]
-    # # 执行另一个 Python 文件，并传递参数
-    # subprocess.run([sys.executable, program] + api_pt)
-    os.system(f'python /home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/cmd_inference.py -m /home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth -c /home/xlab-app-center/Speaker/VITS_Horo_Config.json -o /home/xlab-app-center/ -l "日本語" -t {context} -s Horo -ls 0.85')
+    api_pt = [api_param_args_1, api_param_conf_1, 
+              api_param_args_2, api_param_conf_2,
+              api_param_args_3, api_param_conf_3,
+              api_param_args_4, api_param_conf_4,
+              api_param_args_5, api_param_conf_5,
+              api_param_args_6, api_param_conf_6,
+              api_param_args_7, api_param_conf_7]
+    # 执行另一个 Python 文件，并传递参数
+    subprocess.run([sys.executable, program] + api_pt)
+    
 
 # 构造模型链的对象
 class Chatty_Horo_Chain:
