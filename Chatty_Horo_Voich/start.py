@@ -7,7 +7,9 @@ import gradio as gr
 import sys
 import os
 
-os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/InternLM_openNotebook")
+__file__ = "/home/xlab-app-center/"
+
+os.system(f"git clone https://github.com/SaaRaaS-1300/InternLM_openNotebook /home/xlab-app-center/test")
 
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
@@ -21,7 +23,7 @@ print("Qwen_Auxiliary_AWQ 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
-         output='Speaker')
+         output='/home/xlab-app-center/Speaker')
 print("Speaker_Tuning_Model 下载完毕")
 
 # Qwen 模型初始化
@@ -38,11 +40,11 @@ qwen_translation_chain = qwen_translation_chain(Qwen_model)
 # 定义音频构建函数
 def voice_builder(context: str):
     # 定义 API 参数
-    program = "/home/xlab-app-center/InternLM_openNotebook/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
+    program = "/home/xlab-app-center/test/Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
-    api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
+    api_param_conf_1 = "/home/xlab-app-center/Speaker/VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
+    api_param_conf_2 = "/home/xlab-app-center/Speaker/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
     api_param_conf_3 = "/home/xlab-app-center/"
     api_param_args_4 = "-l" 
@@ -137,7 +139,7 @@ class Chatty_Horo_Chain:
             用于音频转化
         """
         # 路径
-        return "/home/xlab-app-center/output.wav"
+        return os.path.join(os.path.dirname(__file__), "output.wav")
 
 
 # 构建对话模式
