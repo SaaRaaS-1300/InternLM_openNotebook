@@ -1,12 +1,35 @@
 from config.chatty_chain_constructor import horowag_conversation_chain, qwen_translation_chain
 from config.chatty_model_rebuilder import Qwen_Assistant, Horowag
 from langchain.prompts import PromptTemplate
+from openxlab.model import download
 import subprocess
 import gradio as gr
 import sys
 import os
 
 __file__ = "/root/Chatty_Horo_Voich/Voice/"
+# 加载基础的语言模型 Horowag_7b
+download(model_repo='SaaRaaS/Horowag_7b',
+         model_name=['pytorch_model-00001-of-00008',
+                     'pytorch_model-00002-of-00008',
+                     'pytorch_model-00003-of-00008',
+                     'pytorch_model-00004-of-00008',
+                     'pytorch_model-00005-of-00008',
+                     'pytorch_model-00006-of-00008',
+                     'pytorch_model-00007-of-00008',
+                     'pytorch_model-00008-of-00008',
+                     'config.json',
+                     'configuration_internlm.py',
+                     'generation_config.json',
+                     'modeling_internlm2.py',
+                     'pytorch_model.bin.index.json',
+                     'special_tokens_map.json',
+                     'tokenization_internlm.py',
+                     'tokenizer.model',
+                     'tokenizer_config.json'],
+         output='Horowag_7b')
+
+# 加载辅助的语言模型 Qwen1_5
 
 # Qwen 模型初始化
 Qwen_model = Qwen_Assistant(
@@ -34,7 +57,7 @@ def voice_builder(context: str):
     api_param_args_5 = "-t" 
     api_param_conf_5 = context
     api_param_args_6 = "-s"
-    api_param_conf_6 = "日语北斗（小清水亚美）"
+    api_param_conf_6 = "Horo"
     api_param_args_7 = "-ls"
     api_param_conf_7 = "0.85"
     
@@ -126,7 +149,7 @@ class Chatty_Horo_Chain:
 
 # 构建对话模式
 Chatty_Horo_Chain = Chatty_Horo_Chain(
-    model_path="/root/horowag/config/work_dirs/hf_merge",
+    model_path="Horowag_7b",
     qwen_translation_chain=qwen_translation_chain
 )
 
@@ -189,6 +212,8 @@ with block_1 as demo_1:
     1. 🎯语音版因为算力限制，运算时间较长(>=20s, <=100s)，请耐心等待🎯
     2. ✨如果希望能够与贤狼赫萝快速沟通，建议使用 Chatty-Chatty 版本(左上角 Tab)✨
     3. 🌠版本虽然有一定鲁棒性，但是限于个人技术，请尽可能使用中文且减少错字🌠
+    4. 🆕该版本下，模型对问题的回答会转化为音频，放置于音频输出框内🆕
+    5. 🍟由于项目技术实现部分是我个人独自负责，所以模型可能会出现一些小问题，感谢您的指正🍟
     <br>
     """)
 
@@ -236,6 +261,7 @@ with block_2 as demo_2:
     1. 🎯语音版因为算力限制，运算时间较长(>=20s, <=100s)，请耐心等待🎯
     2. ✨如果希望能够与贤狼赫萝快速沟通，建议使用 Chatty-Chatty 版本(左上角 Tab)✨
     3. 🌠版本虽然有一定鲁棒性，但是限于个人技术，请尽可能使用中文且减少错字🌠
+    4. 🍟由于项目技术实现是我个人独自负责，所以模型实现会出现一些小问题，感谢您的指正🍟
     <br>
     """)
 
