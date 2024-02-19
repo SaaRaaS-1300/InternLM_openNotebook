@@ -7,46 +7,19 @@ import gradio as gr
 import sys
 import os
 
-__file__ = "/root/"
+__file__ = "/home/"
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
-         model_name=['pytorch_model-00001-of-00008',
-                     'pytorch_model-00002-of-00008',
-                     'pytorch_model-00003-of-00008',
-                     'pytorch_model-00004-of-00008',
-                     'pytorch_model-00005-of-00008',
-                     'pytorch_model-00006-of-00008',
-                     'pytorch_model-00007-of-00008',
-                     'pytorch_model-00008-of-00008',
-                     'config.json',
-                     'configuration_internlm.py',
-                     'generation_config.json',
-                     'modeling_internlm2.py',
-                     'pytorch_model.bin.index.json',
-                     'special_tokens_map.json',
-                     'tokenization_internlm.py',
-                     'tokenizer.model',
-                     'tokenizer_config.json'],
          output='Horowag_7b')
 print("Horowag_7b 下载完毕")
 
 # 加载辅助的语言模型 Qwen1_5
 download(model_repo='SaaRaaS/Qwen_Auxiliary_AWQ',
-         model_name=['config.json',
-                     'generation_config.json',
-                     'merges.txt',
-                     'model.safetensors',
-                     'quant_config.json',
-                     'tokenizer.json',
-                     'tokenizer_config.json',
-                     'vocab.json'],
          output='Qwen_Auxiliary_AWQ')
 print("Qwen_Auxiliary_AWQ 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
-         model_name=['VITS_Horo_G_10000R.pth',
-                     'VITS_Horo_Config.json'],
          output='Speaker')
 print("Speaker_Tuning_Model 下载完毕")
 
@@ -70,7 +43,7 @@ def voice_builder(context: str):
     api_param_args_2 = "-c" 
     api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
-    api_param_conf_3 = "/root/"
+    api_param_conf_3 = "/home/"
     api_param_args_4 = "-l" 
     api_param_conf_4 = "日本語"
     api_param_args_5 = "-t" 
