@@ -16,6 +16,9 @@ os.chdir('Chatty_Horo_Voich/VITS-kit/monotonic_align')
 os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
 
+# 环境命令
+os.chdir('/home/xlab-app-center/')
+
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
          output='Horowag_7b')
@@ -30,9 +33,6 @@ print("Qwen_Auxiliary_AWQ 下载完毕")
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
          output='Speaker')
 print("Speaker_Tuning_Model 下载完毕")
-
-# 环境命令
-os.chdir('/home/xlab-app-center/')
 
 # Qwen 模型初始化
 Qwen_model = Qwen_Assistant(
