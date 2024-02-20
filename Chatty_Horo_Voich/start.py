@@ -52,7 +52,7 @@ def voice_builder(context: str):
     api_param_args_1 = "-m" 
     api_param_conf_1 = "VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "VITS_Horo_Config.json"
+    api_param_conf_2 = "/home/xlab-app-center/VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
     api_param_conf_3 = ""
     api_param_args_4 = "-l" 
