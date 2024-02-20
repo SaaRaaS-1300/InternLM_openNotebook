@@ -31,7 +31,7 @@ print("Qwen_Auxiliary_AWQ 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
-         output='Speaker')
+         output='/home/xlab-app-center/')
 print("Speaker_Tuning_Model 下载完毕")
 
 # Qwen 模型初始化
@@ -50,9 +50,9 @@ def voice_builder(context: str):
     # 定义 API 参数
     program = "Chatty_Horo_Voich/VITS-kit/cmd_inference.py"
     api_param_args_1 = "-m" 
-    api_param_conf_1 = "Speaker/VITS_Horo_G_10000R.pth"
+    api_param_conf_1 = "VITS_Horo_G_10000R.pth"
     api_param_args_2 = "-c" 
-    api_param_conf_2 = "Speaker/VITS_Horo_Config.json"
+    api_param_conf_2 = "VITS_Horo_Config.json"
     api_param_args_3 = "-o" 
     api_param_conf_3 = ""
     api_param_args_4 = "-l" 
