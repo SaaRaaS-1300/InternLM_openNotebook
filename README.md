@@ -45,24 +45,12 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
     from openxlab.model import download
     # 加载基础的语言模型 Horowag_7b
     download(model_repo='SaaRaaS/Horowag_7b',
-            model_name=['pytorch_model-00001-of-00008',
-                        'pytorch_model-00002-of-00008',
-                        'pytorch_model-00003-of-00008',
-                        'pytorch_model-00004-of-00008',
-                        'pytorch_model-00005-of-00008',
-                        'pytorch_model-00006-of-00008',
-                        'pytorch_model-00007-of-00008',
-                        'pytorch_model-00008-of-00008',
-                        'config.json',
-                        'configuration_internlm.py',
-                        'generation_config.json',
-                        'modeling_internlm2.py',
-                        'pytorch_model.bin.index.json',
-                        'special_tokens_map.json',
-                        'tokenization_internlm.py',
-                        'tokenizer.model',
-                        'tokenizer_config.json'],
-            output='Horowag_7b')
+             output='Horowag_7b')
+
+**目前模型应用的部署情况：**
+
++ **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
++ **OpenXLab模型链接：**[OpenXLab-Horo](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
 
 ---
 
@@ -70,17 +58,25 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
  <img src="horowag_exp.gif"> 
  </center>
 
-**目前模型应用的部署情况：**
+## 🤖贡献墙🤖
 
-+ **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
-+ **OpenXLab模型链接：**[OpenXLab-Horo](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
++ **🆕那路 -> Horowag_7b🆕**
+
++ **🆕那路 -> Horowag_Mini🆕**
+
++ **🆕那路 -> Horowag_7b_Chat_Ani🆕**
+
++ **🆕那路 -> WebUI🆕**
+
++ **✨[Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) -> 提供美术支持✨**
+
++ **✨[Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) + 那路 -> 制备微调数据集✨**
 
 ## 👻致谢👻
 
-
 + **☃️感谢 [书生·浦语开源训练营](https://github.com/InternLM) 的技术指导以及算力☃️**
 
-+ **✨感谢 [Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) 提供的美术支持✨**
++ **✨感谢 白洁 参与 `1.8b` 模型的相关工作✨**
 
 ## 🍔[B站技术分享](https://www.bilibili.com/video/BV1V7421N7ae/?share_source=copy_web&vd_source=1019285f8b0281a44f38cf7445f38144)🍔
 
