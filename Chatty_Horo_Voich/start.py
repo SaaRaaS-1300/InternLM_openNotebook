@@ -17,8 +17,8 @@ os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
 
 # 环境命令
-os.system(export http_proxy=http://127.0.0.1:1080)
-os.system(export https_proxy=$http_proxy)
+os.system("export http_proxy=http://127.0.0.1:1080")
+os.system("export https_proxy=$http_proxy")
 os.chdir('/home/xlab-app-center/')
 
 # 加载基础的语言模型 Horowag_7b
