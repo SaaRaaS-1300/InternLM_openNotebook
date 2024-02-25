@@ -7,7 +7,9 @@ import gradio as gr
 import sys
 import os
 
+# 预设变量
 __file__ = " "
+theme = 'ParityError/Anime'
 
 # 构建编译环境
 os.system("pip install imageio==2.4.1")
@@ -272,7 +274,11 @@ with block_2 as demo_2:
     """)
 
 # threads to consume the request
-demo = gr.TabbedInterface([block_1, block_2], ["Voicy_Voicy", "Chatty_Chatty"])
+demo = gr.TabbedInterface(
+    [block_1, block_2], 
+    ["Voicy_Voicy", "Chatty_Chatty"],
+    theme=theme
+)
 # threads to consume the request
 gr.close_all()
 # 针对 Gradio的美化
