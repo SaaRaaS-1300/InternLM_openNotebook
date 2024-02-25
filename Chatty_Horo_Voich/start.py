@@ -17,6 +17,8 @@ os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
 
 # 环境命令
+os.system(export http_proxy=http://127.0.0.1:1080)
+os.system(export https_proxy=$http_proxy)
 os.chdir('/home/xlab-app-center/')
 
 # 加载基础的语言模型 Horowag_7b
@@ -195,10 +197,10 @@ with block_1 as demo_1:
             with gr.Row():
                 # 创建提交按钮。
                 chatty_btn = gr.Button("Chat")
-            with gr.Row():
-                # 创建一个清除按钮，用于清除聊天机器人组件的内容。
-                clear = gr.ClearButton(
-                    components=[chatbot], value="Clear console")
+            # with gr.Row():
+            #     # 创建一个清除按钮，用于清除聊天机器人组件的内容。
+            #     clear = gr.ClearButton(
+            #         components=[chatbot], value="Clear console")
 
         # 设置按钮的点击事件。当点击时，调用上面定义的函数，并传入用户的消息和聊天历史记录，然后更新文本框和聊天机器人组件。
         chatty_btn.click(
