@@ -120,6 +120,12 @@ class Chatty_Horo_Chain:
             os.system("ls Chatty_Horo_Voich")
             print("----")
             os.system("ls Chatty_Horo_Voich/VITS-kit")
+            print("----")
+            os.system("ls Chatty_Horo_Voich/VITS-kit/__pycache__")
+            print("----")
+            os.system("ls Chatty_Horo_Voich/VITS-kit/configs")
+            print("----")
+            os.system("ls Chatty_Horo_Voich/VITS-kit/text")
 
             
             # 聊天函数
