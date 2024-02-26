@@ -14,7 +14,7 @@ theme = 'ParityError/Anime'
 # 构建编译环境
 os.system("pip install imageio==2.4.1")
 os.system("pip install moviepy==1.0.1")
-os.system("pip install openjtalk==0.3.0.dev3")
+os.system("pip install pyopenjtalk==0.3.3")
 os.chdir('Chatty_Horo_Voich/VITS-kit/monotonic_align')
 os.system("mkdir monotonic_align")
 os.system("python setup.py build_ext --inplace")
