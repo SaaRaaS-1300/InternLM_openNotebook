@@ -10,6 +10,11 @@ import os
 # 预设变量
 __file__ = " "
 theme = 'ParityError/Anime'
+# /root/.conda/envs/test/lib/python3.10/site-packages/pyopenjtalk/
+os.system("conda env list")
+os.chdir(".conda")
+os.system("ls")
+
 
 # 构建编译环境
 os.system("pip install imageio==2.4.1")
