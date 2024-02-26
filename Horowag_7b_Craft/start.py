@@ -4,23 +4,6 @@ from openxlab.model import download
 import gradio as gr
 # 加载基础的语言模型 Horowag_7b
 download(model_repo='SaaRaaS/Horowag_7b',
-         model_name=['pytorch_model-00001-of-00008',
-                     'pytorch_model-00002-of-00008',
-                     'pytorch_model-00003-of-00008',
-                     'pytorch_model-00004-of-00008',
-                     'pytorch_model-00005-of-00008',
-                     'pytorch_model-00006-of-00008',
-                     'pytorch_model-00007-of-00008',
-                     'pytorch_model-00008-of-00008',
-                     'config.json',
-                     'configuration_internlm.py',
-                     'generation_config.json',
-                     'modeling_internlm2.py',
-                     'pytorch_model.bin.index.json',
-                     'special_tokens_map.json',
-                     'tokenization_internlm.py',
-                     'tokenizer.model',
-                     'tokenizer_config.json'],
          output='Horowag_7b')
 
 
