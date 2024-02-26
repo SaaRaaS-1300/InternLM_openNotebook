@@ -1,7 +1,7 @@
 # InternLM_openNotebook && 🍏Chatty_Horo🍎
 [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
 
-![alt text](Horowag_7b/src/pic/LOGO.jpg)
+![alt text](Horowag_7b_Craft/src/pic/LOGO.jpg)
 
 ## 😊书生·浦语 (InternLM) 开源大语言模型课程笔记😊
 
@@ -25,7 +25,7 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 ## 🌠版本更新🌠
 
-![alt text](Horowag_7b/src/pic/BG-1.jpg)
+![alt text](Horowag_7b_Craft/src/pic/BG-1.jpg)
 
 <div align="center">
 
