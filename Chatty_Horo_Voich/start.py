@@ -116,18 +116,6 @@ class Chatty_Horo_Chain:
             print("翻译结果是：", translate_ans)
             # 转化音频文件(时序)
             voice_builder(context=translate_ans)
-            os.system("ls")
-            print("----")
-            os.system("ls Chatty_Horo_Voich")
-            print("----")
-            os.system("ls Chatty_Horo_Voich/VITS-kit")
-            print("----")
-            os.system("ls Chatty_Horo_Voich/VITS-kit/__pycache__")
-            print("----")
-            os.system("ls Chatty_Horo_Voich/VITS-kit/configs")
-            print("----")
-            os.system("ls Chatty_Horo_Voich/VITS-kit/text")
-
             
             # 聊天函数
             chat_history.append(
