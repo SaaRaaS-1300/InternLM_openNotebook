@@ -12,7 +12,7 @@ __file__ = " "
 theme = 'ParityError/Anime'
 # /root/.conda/envs/test/lib/python3.10/site-packages/pyopenjtalk/
 os.system("conda env list")
-os.chdir("/root/.conda")
+os.chdir("/root/")
 os.system("ls")
 
 
