@@ -16,9 +16,8 @@ theme = 'ParityError/Anime'
 os.system("pip install imageio==2.4.1")
 os.system("pip install moviepy==1.0.1")
 os.system("pip install pyopenjtalk==0.3.3")
-os.system("cp open_jtalk_dic_utf_8-1.11.tar.gz /usr/local/share/python/.pyenv/versions/3.9.16/lib/python3.9/site-packages/pyopenjtalk/")
-os.chdir('/usr/local/share/python/.pyenv/versions/3.9.16/lib/python3.9/site-packages/pyopenjtalk/')
-os.system("tar -zxvf open_jtalk_dic_utf_8-1.11.tar.gz")
+os.system("tar -zxvf open_jtalk_dic_utf_8-1.11.tar.gz -C /usr/local/share/python/.pyenv/versions/3.9.16/lib/python3.9/site-packages/pyopenjtalk/")
+
 print("声音编译环境构建完成...")
 
 # 回归任务环境
