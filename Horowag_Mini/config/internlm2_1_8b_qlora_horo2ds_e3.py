@@ -16,24 +16,27 @@ from xtuner.dataset.map_fns import oasst1_map_fn, template_map_fn_factory
 from xtuner.engine import DatasetInfoHook, EvaluateChatHook
 from xtuner.model import SupervisedFinetune
 from xtuner.utils import PROMPT_TEMPLATE
+from xtuner.engine.hooks import VarlenAttnArgsToMessageHubHook
+from xtuner.engine.runner import TrainLoop
+from xtuner.utils import SYSTEM_TEMPLATE
 
 #######################################################################
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-pretrained_model_name_or_path = '/root/horowag/model/internlm2-chat-7b'
+pretrained_model_name_or_path = '/root/horowag_mini/model/InternLM2-chat-1_8B'
 
 # Data
-data_path = '/root/horowag/data/instruct_talk.json'
+data_path = '/root/horowag_mini/data/instruct_talk.json'
 prompt_template = PROMPT_TEMPLATE.default
-max_length = 1024
+max_length = 2048
 pack_to_max_length = True
 
 # Scheduler & Optimizer
-batch_size = 1  # per_device
+batch_size = 3  # per_device
 accumulative_counts = 16
 dataloader_num_workers = 0
-max_epochs = 3
+max_epochs = 10
 optim_type = AdamW
 lr = 2e-4
 betas = (0.9, 0.999)
@@ -41,11 +44,15 @@ weight_decay = 0
 max_norm = 1  # grad clip
 warmup_ratio = 0.03
 
+# Save
+save_steps = 500
+save_total_limit = 5  # Maximum checkpoints to keep (-1 means unlimited)
+
 # Evaluate the generation performance during the training
-evaluation_freq = 270
+evaluation_freq = 500
 SYSTEM = ''
 evaluation_inputs = [
-    # 自我介绍相关
+        # 自我介绍相关
     '请你介绍一下自己吧！',
     '你是谁？',
     '你好哇！',
@@ -78,14 +85,14 @@ model = dict(
         type=AutoModelForCausalLM.from_pretrained,
         pretrained_model_name_or_path=pretrained_model_name_or_path,
         trust_remote_code=True,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.bfloat16,
         quantization_config=dict(
             type=BitsAndBytesConfig,
             load_in_4bit=False,
             load_in_8bit=True,
             llm_int8_threshold=6.0,
             llm_int8_has_fp16_weight=False,
-            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_compute_dtype=torch.bfloat16,
             bnb_4bit_use_double_quant=True,
             bnb_4bit_quant_type='nf4')),
     lora=dict(
@@ -129,7 +136,7 @@ optim_wrapper = dict(
     clip_grad=dict(max_norm=max_norm, error_if_nonfinite=False),
     accumulative_counts=accumulative_counts,
     loss_scale='dynamic',
-    dtype='float16')
+    dtype='bfloat16')
 
 # learning policy
 # More information: https://github.com/open-mmlab/mmengine/blob/main/docs/en/tutorials/param_scheduler.md  # noqa: E501
@@ -146,12 +153,12 @@ param_scheduler = [
         eta_min=0.0,
         by_epoch=True,
         begin=warmup_ratio * max_epochs,
-        T_max=max_epochs,
+        end=max_epochs,
         convert_to_iter_based=True)
 ]
 
 # train, val, test setting
-train_cfg = dict(by_epoch=True, max_epochs=max_epochs, val_interval=1)
+train_cfg = dict(type=TrainLoop, max_epochs=max_epochs)
 
 #######################################################################
 #                           PART 5  Runtime                           #
@@ -172,12 +179,16 @@ custom_hooks = [
 default_hooks = dict(
     # record the time of every iteration.
     timer=dict(type=IterTimerHook),
-    # print log every 100 iterations.
-    logger=dict(type=LoggerHook, interval=10),
+    # print log every 10 iterations.
+    logger=dict(type=LoggerHook, log_metric_by_epoch=False, interval=10),
     # enable the parameter scheduler.
     param_scheduler=dict(type=ParamSchedulerHook),
-    # save checkpoint per epoch.
-    checkpoint=dict(type=CheckpointHook, interval=1),
+    # save checkpoint per `save_steps`.
+    checkpoint=dict(
+        type=CheckpointHook,
+        by_epoch=False,
+        interval=save_steps,
+        max_keep_ckpts=save_total_limit),
     # set sampler seed in distributed evrionment.
     sampler_seed=dict(type=DistSamplerSeedHook),
 )
@@ -206,3 +217,6 @@ resume = False
 
 # Defaults to use random seed and disable `deterministic`
 randomness = dict(seed=None, deterministic=False)
+
+# set log processor
+log_processor = dict(by_epoch=False)
