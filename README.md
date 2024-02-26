@@ -27,6 +27,8 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 ![alt text](Horowag_7b_Craft/src/pic/BG-1.jpg)
 
+---
+
 <div align="center">
 
 | 版本号 | 模型相关解释 |
