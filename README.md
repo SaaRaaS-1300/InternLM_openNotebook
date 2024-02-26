@@ -81,5 +81,5 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 ## 🍔[B站技术分享](https://www.bilibili.com/video/BV1V7421N7ae/?share_source=copy_web&vd_source=1019285f8b0281a44f38cf7445f38144)🍔
 
  <center> 
- <img src="Horowag_7b/src/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
+ <img src="Horowag_7b_Craft/src/pic/BG-2.png" alt="example" width="2500%" height="auto"> 
  </center>
