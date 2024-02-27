@@ -1,5 +1,6 @@
 # InternLM_openNotebook && 🍏Chatty_Horo🍎
-[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b) ![Static Badge](https://img.shields.io/badge/license-Apache--2.0-green?label=license)
+
 
 ![alt text](Horowag_7b_Craft/src/pic/LOGO.jpg)
 
