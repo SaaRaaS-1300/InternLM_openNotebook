@@ -33,9 +33,10 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 | 版本号 | 模型相关解释 |
 |:-------:|:-------:|
-| **Horowag_7b (V1)** | **InternLM2-Chat-7b 微调后的基础赫萝对话模型** |
-| **Horowag_7b (V2)** | **优化数据增强方法 + Langchain 辅助模型输出** |
+| **Horowag_7b** | **InternLM2-Chat-7b 微调后的基础赫萝对话模型** |
+| **Horowag_7b_Craft** | **优化数据增强方法 + Langchain 辅助模型输出** |
 | **Horowag_Mini** | **InternLM2-Chat-1_8b 微调后的轻量级赫萝对话模型** |
+| **Chatty_Horo_Voich** | **InternLM2-Chat-7b 微调 + Assistant Model + VITS** |
 | **-- 暂未完成 --** | **--** |
 
 </div>
