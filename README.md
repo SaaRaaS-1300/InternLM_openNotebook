@@ -42,6 +42,10 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 </div>
 
+**Resource About Models 👇** 
++ **InternLM2-Chat-7b + 微调 = [Horowag_7b_Chat_Ani](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)**
++ **InternLM2-Chat-1_8b + 微调 = [Horowag_1_8b_Chat_Mini](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_Mini)**
+
 ## 🍏OpenXLab🍎
 
 **下载模型的代码示例：**
