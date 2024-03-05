@@ -94,6 +94,8 @@ notebookLink: [Lesson-6 链接](https://github.com/SaaRaaS-1300/InternLM_openNot
 
 + **✨感谢 白洁 参与 `1.8b` 模型的相关工作✨**
 
++ **🛡️感谢 [Alan 👈 团队萌宠](https://space.bilibili.com/76695648) 在数据方面的工作🛡️**
+
 ## 🍔[B站技术分享链接](https://www.bilibili.com/video/BV1V7421N7ae/?share_source=copy_web&vd_source=1019285f8b0281a44f38cf7445f38144)🍔
 
  <center> 
